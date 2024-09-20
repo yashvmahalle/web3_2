@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            background-color: #f0f0f0; /* Light background color */
+        }
+        .container {
+            text-align: center; /* Center content in the container */
+        }
+        form {
+            background-color: #ffffff; /* White background for form */
+            padding: 20px; /* Padding around the form */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+            width: 300px; /* Form width */
+            margin-top: 20px; /* Space between title and form */
+            text-align: left; /* Align form elements to the left */
+        }
+        h1 {
+            margin: 0; /* Remove default margin */
+        }
+        label {
+            display: block; /* Block display for labels */
+            margin-top: 10px; /* Space above each label */
+        }
+        input, textarea, select {
+            width: 100%; /* Full width for inputs */
+            padding: 8px; /* Padding inside inputs */
+            margin-top: 5px; /* Space above inputs */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .rating-container {
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: space-between; /* Space out the items */
+            margin-top: 5px; /* Space above the rating options */
+        }
+        .rating-container label {
+            display: flex; /* Display flex to align radio and text */
+            align-items: center; /* Align items vertically */
+        }
+        button {
+            width: 100%; /* Full width button */
+            padding: 10px; /* Button padding */
+            margin-top: 15px; /* Space above button */
+            background-color: #4CAF50; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Feedback Form</h1>
+    <form>
+        <!-- Dropdown Menu for Feedback Type -->
+        <label for="feedback-type">Feedback Type:</label>
+        <select id="feedback-type" name="feedback-type" required>
+            <option value="general">General Feedback</option>
+            <option value="bug">Report a Bug</option>
+            <option value="feature">Feature Request</option>
+        </select>
+        
+        <!-- Text Area for User's Message -->
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        
+        <!-- Radio Buttons for Website Rating (Horizontal Alignment) -->
+        <label>Website Rating:</label>
+        <div class="rating-container">
+            <label for="rating-1">
+                <input type="radio" id="rating-1" name="rating" value="1"> 1
+            </label>
+            <label for="rating-2">
+                <input type="radio" id="rating-2" name="rating" value="2"> 2
+            </label>
+            <label for="rating-3">
+                <input type="radio" id="rating-3" name="rating" value="3"> 3
+            </label>
+            <label for="rating-4">
+                <input type="radio" id="rating-4" name="rating" value="4"> 4
+            </label>
+            <label for="rating-5">
+                <input type="radio" id="rating-5" name="rating" value="5"> 5
+            </label>
+        </div>
+        
+        <!-- Input for Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="10" max="100" required>
+        
+        <!-- Email Input Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <!-- Password Input Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+        
+        <!-- Optional Website URL Input Field -->
+        <label for="website">Website (optional):</label>
+        <input type="url" id="website" name="website">
+        
+        <!-- Checkbox for Terms and Conditions -->
+        <label>
+            <input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions
+        </label>
+        
+        <!-- Submission Button -->
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
